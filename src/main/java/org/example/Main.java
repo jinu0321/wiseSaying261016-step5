@@ -16,15 +16,18 @@ class Quote {
 }
 
 public class Main {
-    static void main() {
+    public static void main(String[] args) {
         System.out.println("== 명언 앱 ==");
 
         ArrayList<Quote> arr = new ArrayList<>();
+        Scanner sc = new Scanner(System.in);
 
         while (true) {
             System.out.print("명령) ");
 
-            Scanner sc = new Scanner(System.in);
+            if (!sc.hasNextLine()) {
+                break;
+            }
 
             String cmd = sc.nextLine().trim();
 
